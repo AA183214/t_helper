@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>实时时间</title>
+        <script>
+                function time(){
+                    var today=new Date();
+                    var hour=today.getHours();
+                    var minutes=today.getMinutes();
+                    var seconds=today.getSeconds();
+                    minutes=checkt(minutes);
+                    seconds=checkt(seconds);
+                    document.getElementById("time").innerHTML="<p id=\"time\" style=\"font-size: 90px;\">"+hour+":"+minutes+":"+seconds+"</p>";
+                    setInterval('time()',100);
+                }
+                function checkt(i){
+                    if (i<10) {
+                        return "0"+i;
+                    }
+                    else{
+                        return i;
+                    }
+                }
+            </script>
+        <body onload="time()">
+            <center>
+                <p id="time" style="font-size: 90px;"></p>
+                <a style="font-size: 30px;" href="javascript:history.back()">返回</a>
+            </center>
+        </body>
+    </head>
+</html>

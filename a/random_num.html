@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //生成从minNum到maxNum的随机数
+            function randomNum(minNum,maxNum){ 
+                switch(arguments.length){ 
+                    case 1: 
+                        return parseInt(Math.random()*minNum+1,10); 
+                    break; 
+                    case 2: 
+                        return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+                    break; 
+                        default: 
+                            return 0; 
+                        break; 
+                } 
+            }
+            function write(){
+                document.getElementById("number").innerHTML="<p id=\"number\" style=\"font-size: 90px;\">抽到的学号:"+randomNum(1.43);
+            }
+        </script>
+        <body>
+            <center>
+                <p id="number" style="font-size: 90px;">点击按钮抽学号</p>
+                <button onclick="write()" style="font-size: 90px;">点我抽学号</button>
+                <a href="javascript:history.back">返回</a>
+            </center>
+        </body>
+    </head>
+</html>
