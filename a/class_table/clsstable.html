@@ -10,11 +10,15 @@
                 var week=today.getDay();
                 var hour=today.getHours();
                 var minute=today.getMinutes();
+                document.getElementById("time").innerHTML="<p id=\"time\" style=\"font-size: 90px;\">现在是"+year+"年"+month+"月"+day+"日"+hour+"时"+minute+"分"+"</p>";
                 setInterval(get_time,1000);
             }
         </script>
-        <body>
+        <script src="class/readfile.js">
             
+        </script>
+        <body onload="get_time()">
+            <p id="time" style="font-size: 90px;">aaa</p>
         </body>
     </head>
 </html>
